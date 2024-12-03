@@ -23,5 +23,15 @@
     ></div>
 
     <!-- x-data with methods -->
+    <div
+      x-data="{
+        message: 'Click to change message',
+        changeMessage() {
+            this.message = 'Changed message'
+        }
+     }"
+    >
+      <p x-text="message" @click="changeMessage()"></p>
+    </div>
   </body>
 </html>

@@ -180,5 +180,15 @@
         background-color: yellow;
       }
     </style>
+
+    <!-- x-bind: style -->
+    <div x-data="{clicked:false}">
+      <button
+        :style="{backgroundColor: clicked ? 'red': ''}"
+        @click="clicked = !clicked"
+      >
+        Click ME
+      </button>
+    </div>
   </body>
 </html>

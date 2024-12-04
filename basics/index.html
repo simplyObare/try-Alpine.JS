@@ -168,5 +168,17 @@
         <h1 x-text="n"></h1>
       </template>
     </div>
+
+    <!-- x-bind: class -->
+    <div x-data="{clicked:false}">
+      <button x-bind:class="clicked ? 'yellow': ''" @click="clicked = !clicked">
+        Click ME
+      </button>
+    </div>
+    <style>
+      .yellow {
+        background-color: yellow;
+      }
+    </style>
   </body>
 </html>

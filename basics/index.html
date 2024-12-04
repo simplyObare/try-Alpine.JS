@@ -124,5 +124,22 @@
         Content..
       </div>
     </div>
+
+    <!-- x-if -->
+    <div
+      x-data="{
+      open: false,
+      toggle() {
+        this.open = !this.open
+      }
+    }"
+    >
+      <button @click="toggle()">Open/Close</button>
+      <template x-if="open">
+        <div>
+          <p>Content</p>
+        </div>
+      </template>
+    </div>
   </body>
 </html>

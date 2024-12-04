@@ -105,5 +105,24 @@
       <button @click="toggle()">Open/Close</button>
       <div x-show="open">Content..</div>
     </div>
+
+    <!-- x-show and x-transition -->
+    <div
+      x-data="{
+      open:false,
+      toggle() {
+        this.open = !this.open
+      }
+    }"
+    >
+      <button @click="toggle()">Open/Close</button>
+      <div
+        x-show="open"
+        x-transition.enter.duration.500ms.enter-from-opacity-0.enter-to-opacity-100
+        x-transition:leave.duration.5000ms.leave-from-opacity-100.leave-to-opacity-0
+      >
+        Content..
+      </div>
+    </div>
   </body>
 </html>

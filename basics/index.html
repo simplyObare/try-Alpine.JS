@@ -200,5 +200,11 @@
       />
       <button @click="alert('Submitted')">Submit</button>
     </div>
+
+    <!-- x-model -->
+    <div x-data="{keyword: null}">
+      <input type="text" x-model="keyword" placeholder="search for items" />
+      <p x-text="keyword"></p>
+    </div>
   </body>
 </html>

@@ -86,5 +86,24 @@
         </div>
       </div>
     </div>
+
+    <!-- Getters and Setters-->
+    <div
+      x-data="{
+      open:false,
+      get isOpen() {
+        return this.open
+      },
+      set isOpen(value) {
+        this.open = value
+      }
+      toggle() {
+        this.isOpen = !this.isOpen
+      }
+    }"
+    >
+      <button @click="toggle()">Open/Close</button>
+      <div x-show="open">Content..</div>
+    </div>
   </body>
 </html>

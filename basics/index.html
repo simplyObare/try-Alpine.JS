@@ -141,5 +141,25 @@
         </div>
       </template>
     </div>
+
+    <!-- x-for -->
+    <div
+      x-data="{
+      posts:[
+      {id:1, title:'Post 1'},
+      {id:2, title:'Post 2'}
+      ]
+    }"
+    >
+      <template x-for="p in posts" :key="p.id">
+        <h2 x-text="p.title"></h2>
+      </template>
+    </div>
+
+    <ul x-data="{ colors: ['Red', 'Orange', 'Yellow'] }">
+      <template x-for="color in colors" :key="color">
+        <li x-text="color"></li>
+      </template>
+    </ul>
   </body>
 </html>

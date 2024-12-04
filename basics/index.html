@@ -50,5 +50,21 @@
 
     <!-- Data coming from store -->
     <div x-data x-text="$store.currentUser.username"></div>
+
+    <!-- x-init  -->
+    <div x-init="console.log('Hello World')"></div>
+    <div
+      x-data="{
+      init() {
+        console.log('Hello World')
+      }
+    }"
+    ></div>
+    <div
+      x-data="{todo:{}}"
+      x-init="todo = await ((await fetch('https://jsonplaceholder.typicode.com/todos/1')).json())"
+    >
+      <p x-text="todo.title"></p>
+    </div>
   </body>
 </html>

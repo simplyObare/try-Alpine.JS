@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 1</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      style="display: flex; gap: 1rem"
+      x-data="{colors: ['Red', 'Orange', 'Yellow', 'Green', 'Blue', 'Indigo', 'Violet']}"
+    >
+      <template x-for="color in colors" :key="color">
+        <div
+          style="width: 100px; height: 100px; margin: 10px"
+          :style="{backgroundColor: color}"
+        ></div>
+      </template>
+    </div>
+  </body>
+</html>

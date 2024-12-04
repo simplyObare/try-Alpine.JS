@@ -44,6 +44,11 @@
     </div>
 
     <!-- Data-Less Components -->
-    <div x-data @click="alert('Click me')">Click me</div>
+    <div x-data @click="alert('Click me')" style="cursor: pointer">
+      Click me
+    </div>
+
+    <!-- Data coming from store -->
+    <div x-data x-text="$store.currentUser.username"></div>
   </body>
 </html>

@@ -66,5 +66,25 @@
     >
       <p x-text="todo.title"></p>
     </div>
+
+    <!-- scoping -->
+    <div
+      x-data="{
+      name: 'John Doe',
+      age: 30,
+      gender: 'male'
+     }"
+    >
+      <div
+        x-data="{
+         name: 'Jane Doe',
+         age: 25,
+      }"
+      >
+        <div x-data="{name: 'Jake Doe'}">
+          <p x-text="name"></p>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

@@ -190,5 +190,15 @@
         Click ME
       </button>
     </div>
+
+    <!-- x-on -->
+    <div x-data>
+      <input
+        type="text"
+        style="margin: 10px"
+        @keyup.enter="console.log('Submitted')"
+      />
+      <button @click="alert('Submitted')">Submit</button>
+    </div>
   </body>
 </html>

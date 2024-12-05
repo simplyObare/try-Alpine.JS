@@ -220,5 +220,24 @@
         <p x-text="name"></p>
       </div>
     </div>
+
+    <!-- x-ref -->
+    <div x-data>
+      <button @click="$refs.text.remove()">Remove Text</button>
+      <span x-ref="text">Hello 👋</span>
+    </div>
+
+    <!-- x-cloak -->
+    <div x-data x-cloak>
+      <p x-text="name"></p>
+    </div>
+
+    <div x-data>
+      <span x-cloak x-show="false"
+        >This will not 'blip' onto screen at any point</span
+      >
+    </div>
+
+    
   </body>
 </html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Challenge 2</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body>
+    <div
+      x-data="{
+      keyword: '',
+      color: '',
+      id: ''
+    }"
+      style="display: flex; gap: 1rem"
+    >
+      <label for=""
+        >Text: <input type="text" x-model="keyword" placeholder="input text"
+      /></label>
+      <label for=""
+        >Color: <input type="text" x-model="color" placeholder="input color"
+      /></label>
+      <label for=""
+        >Id: <input type="text" x-model="id " placeholder="input id"
+      /></label>
+      <button
+        style="width: 150px; height: 40px"
+        x-text="keyword"
+        :style="{backgroundColor: color}"
+        :id="id"
+      ></button>
+    </div>
+  </body>
+</html>

@@ -238,6 +238,20 @@
       >
     </div>
 
-    
+    <!-- x-teleport -->
+    <div x-data>
+      <p>This will not 'blip' onto screen at any point</p>
+      <div x-data="{modal: false}">
+        <button @click="modal = true">Open Modal</button>
+        <template x-teleport="body">
+          <div x-show="modal">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi
+            ratione voluptatibus labore pariatur, soluta et quae assumenda
+            mollitia? Delectus, eius modi dolore cum blanditiis similique
+            repellat tempora. Dolore, placeat incidunt.
+          </div>
+        </template>
+      </div>
+    </div>
   </body>
 </html>

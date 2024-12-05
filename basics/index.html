@@ -206,5 +206,19 @@
       <input type="text" x-model="keyword" placeholder="search for items" />
       <p x-text="keyword"></p>
     </div>
+
+    <!-- x-effect -->
+    <div x-data="{name: 'John Doe', message: null}">
+      <p x-effect="message = `Hello ${name}`"></p>
+      <p x-text="message"></p>
+      <button @click="name = 'Jane Donut'">Change Name</button>
+    </div>
+
+    <!-- x-ignore -->
+    <div x-data="{name: 'John Doe'}">
+      <div x-ignore>
+        <p x-text="name"></p>
+      </div>
+    </div>
   </body>
 </html>

@@ -16,5 +16,22 @@
         Replace me with "Hello World!"
       </button>
     </div>
+
+    <!-- $refs -->
+    <div x-data>
+      <button @click="$refs.text.innerHTML = 'Hello World!'">
+        Replace me with "Hello World!"
+      </button>
+      <span x-ref="text"></span>
+    </div>
+
+    <!-- $watch -->
+    <div
+      x-data="{ open: false }"
+      x-init="$watch('open', value => console.log(value))"
+    >
+      <button @click="open = ! open">Toggle Open</button>
+      <div x-show="open">Content</div>
+    </div>
   </body>
 </html>
